@@ -1,2 +1,5 @@
 
 ecs-ec2-keypair.ppk
+.metadata
+**/metadata/*
+*.png

@@ -12,6 +12,7 @@ public class UserManagementApplication extends SpringBootServletInitializer {
 
 	public static void main(String[] args) {
 		SpringApplication.run(UserManagementApplication.class, args);
+		//main class
 	}
 
 	@Override
