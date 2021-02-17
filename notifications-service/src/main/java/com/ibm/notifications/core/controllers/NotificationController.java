@@ -24,12 +24,14 @@ public class NotificationController {
 
 	@PostMapping("/notification/send")
 	public void sendNotification(@RequestBody EmailMessage message){
+		logger.info("sendNotification Logger");
+		System.out.println("sendNotification System Out");
 		notificationService.sendEmail(message);
 	}
 	
 	@GetMapping("/notification/health-status")
 	public String healthStatus(){
-		return "Notification Service is Up and Running";
+		return "Notification Service v2 is Up and Running";
 	}
 	
 	@GetMapping("/notification/info")
@@ -43,7 +45,7 @@ public class NotificationController {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		String finalresult =   "Notification Service IP Address: " + ip + "\n" + "Hostname: " + hostname;
+		String finalresult =   "Notification Service v2 IP Address: " + ip + "\n" + "Hostname: " + hostname;
 		return finalresult;
 	}
 }
